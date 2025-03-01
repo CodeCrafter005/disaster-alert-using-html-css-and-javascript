@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Alert System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Fire Alert System</h1>
+        <p>Enter Fire disaster data to send alerts to mobile phones.</p>
+    </header>
+
+    <main>
+        <section class="input-form">
+            <h2>Enter Disaster Data</h2>
+            <form id="disasterForm">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                
+
+                <label for="severity">Severity:</label>
+                <select id="severity" name="severity" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="phoneNumbers">Phone Numbers (comma-separated):</label>
+                <input type="text" id="phoneNumbers" name="phoneNumbers" required placeholder="+1234567890, +0987654321">
+
+                <button type="submit">Send Alert</button>
+            </form>
+        </section>
+
+        <section class="alerts">
+            <h2>Sent Alerts</h2>
+            <div id="alertList"></div>
+        </section>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
